@@ -1,0 +1,25 @@
+[profile.default]
+src = "contracts"
+out = "out"
+libs = ["node_modules"]
+solc = "0.8.20"
+optimizer = true
+optimizer_runs = 200
+via_ir = true
+
+[profile.fuzz]
+runs = 10000
+max_test_rejects = 65536
+seed = "0x1234"
+
+[profile.invariant]
+runs = 256
+depth = 15
+fail_on_revert = false
+
+[fmt]
+line_length = 120
+tab_width = 2
+bracket_spacing = true
+int_types = "long"
+multiline_func_header = "new_line"
